@@ -1,0 +1,35 @@
+fast_calib:
+  ros__parameters:
+    # Camera intrinsics  
+    fx: 908.4497
+    fy: 909.2491
+    cx: 658.7119
+    cy: 380.6899
+    k1: -0.0319
+    k2: 1.6510
+    p1: 0.0030
+    p2: 0.0005
+
+    # Calibration target parameters
+    marker_size: 0.20 # ArUco marker size (our test data uses 0.16m; adjust to match your marker size)
+    delta_width_qr_center: 0.55 # Half the distance between the centers of two markers in the horizontal direction 
+    delta_height_qr_center: 0.35 # Half the distance between the centers of two markers in the vertical direction
+    delta_width_circles: 0.5 # Distance between the centers of two circles in the horizontal direction
+    delta_height_circles: 0.4 # Distance between the centers of two circles in the vertical direction
+    circle_radius: 0.12 # Radius of the circle 
+
+    # Distance filter
+    x_min: -4.5
+    x_max: 4.5
+    y_min: -2.5
+    y_max: 2.0
+    z_min: -5.5 # avia and mid360: -0.5 ouster: -0.8
+    z_max: 0.5
+
+    # Input
+    lidar_topic: "/livox/lidar" # /ouster/points /livox/lidar
+    bag_path: "/home/xch/fastcalib_ws/src/FAST-Calib-ROS2-dev/calib_data/mid360s"
+    image_path: "/home/xch/fastcalib_ws/src/FAST-Calib-ROS2-dev/calib_data/mid360s/image.png"
+
+    # Output
+    output_path: "/home/xch/fastcalib_ws/src/FAST-Calib-ROS2-dev/calib_data/mid360s"
