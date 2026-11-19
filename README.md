@@ -1,4 +1,3 @@
-# FAST-Calib-ROS2-modified
 # FAST-Calib ROS2 标定程序操作说明
 
 基于 [FAST-Calib](https://github.com/hku-mars/FAST-Calib) 的 LiDAR-相机外参标定工具，已移植到 ROS2（Ubuntu 22.04 / ROS2 Humble）。
